@@ -200,7 +200,7 @@ public class Server {
             	String name = input.readLine();
             	String surname = input.readLine();
                 DatabaseHandler.addStudent(login, password, name, surname, output);
-//                log("Wysłano zapytanie o dodanie oceny studentowi o id: " + studentId+" przez nauczyciela o id: "+teacherId);
+                log("Wysłano zapytanie o dodanie studenta);
             } catch (IOException | NumberFormatException e) {
             	output.println("Błąd podczas dodawania studenta");
             	log("Błąd podczas dodawania studenta");
@@ -211,7 +211,7 @@ public class Server {
             try {
             	String id = input.readLine();
                 DatabaseHandler.deleteStudent(id, output);
-//                log("Wysłano zapytanie o dodanie oceny studentowi o id: " + studentId+" przez nauczyciela o id: "+teacherId);
+                log("Wysłano zapytanie o usuniecie studenta);
             } catch (IOException | NumberFormatException e) {
             	output.println("Błąd podczas usuwania studenta");
             	log("Błąd podczas usuwania studenta");
@@ -222,7 +222,7 @@ public class Server {
             try {
             	String className = input.readLine();
                 DatabaseHandler.addClass(className, output);
-//                log("Wysłano zapytanie o dodanie oceny studentowi o id: " + studentId+" przez nauczyciela o id: "+teacherId);
+                log("Wysłano zapytanie o dodanie klasy);
             } catch (IOException | NumberFormatException e) {
             	output.println("Błąd podczas dodawania klasy");
             	log("Błąd podczas dodawania klasy");
@@ -233,7 +233,7 @@ public class Server {
             try {
             	String className = input.readLine();
             	DatabaseHandler.deleteClass(className, output);
-//                log("Wysłano zapytanie o dodanie oceny studentowi o id: " + studentId+" przez nauczyciela o id: "+teacherId);
+                log("Wysłano zapytanie o usuniecie klasy);
             } catch (IOException | NumberFormatException e) {
             	output.println("Błąd podczas usuwania klasy");
             	log("Błąd podczas usuwania klasy");
@@ -245,10 +245,10 @@ public class Server {
             	String id = input.readLine();
             	String klasa = input.readLine();
                 DatabaseHandler.linkStudent(id,klasa, output);
-//                log("Wysłano zapytanie o dodanie oceny studentowi o id: " + studentId+" przez nauczyciela o id: "+teacherId);
+                log("Wysłano zapytanie o przypisanie klasy do studenta);
             } catch (IOException | NumberFormatException e) {
-            	output.println("Błąd podczas dodawania studenta");
-            	log("Błąd podczas dodawania studenta");
+            	output.println("Błąd podczas przypisywania klasy do studenta");
+            	log("Błąd podczas przypisywania klasy do studenta");
                 e.printStackTrace();
             }
         }
